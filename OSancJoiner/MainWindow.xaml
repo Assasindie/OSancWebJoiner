@@ -1,0 +1,24 @@
+﻿<Window x:Class="OSancJoiner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OSancJoiner"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="258" Width="359">
+    <Grid>
+        <Button Content="Join" HorizontalAlignment="Left" Margin="175,42,0,0" VerticalAlignment="Top" Height="28" Width="51" Command="{Binding joinRaidCommand}"/>
+        <Label Content="Raid ID" Margin="31,15,189,123" />
+        <TextBox HorizontalAlignment="Left" Margin="31,42,0,0" Text="{Binding raidId}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Access Token" Margin="31,65,61,26" />
+        <TextBox HorizontalAlignment="Left" Margin="31,88,0,0" Text="{Binding accessToken}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="React ID" Margin="31,107,78,0" />
+        <TextBox HorizontalAlignment="Left" Margin="31,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding reactId}"/>
+        <TextBlock Text="{Binding responseText}" HorizontalAlignment="Left"  Margin="156,75,0,0" VerticalAlignment="Top" Height="113" Width="193"/>
+        <Button Content="Stop Joining" HorizontalAlignment="Left" Margin="252,42,0,0" VerticalAlignment="Top" Height="28" Width="52" Command="{Binding stopJoinRaidCommand}"/>
+        <Label Content="{Binding isTryingtoJoin}" HorizontalAlignment="Left" Margin="259,16,0,0" VerticalAlignment="Top"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="252,113,0,0" VerticalAlignment="Top" Height="28" Width="51" Command="{Binding loadInfoCommand}"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="175,113,0,0" VerticalAlignment="Top" Height="28" Width="51" Command="{Binding saveInfoCommand}"/>
+
+    </Grid>
+</Window>
